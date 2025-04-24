@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { useMediaQuery } from "../hooks/useMediaQuery"
+import profilepic from "../images/profilepic.jpg"
 
 export default function NavBar() {
   const [toggled, setToggled] = useState(false)
@@ -19,9 +20,13 @@ export default function NavBar() {
         <path d="M2 2L600 2" stroke="black" strokeLinecap="round"/>
       </svg>
 
-      <h1 className="lg:text-lg">
+      {/* <h1 className="lg:text-lg">
         <a href="/personal-website/#about">Profile Picture</a>
-      </h1>
+      </h1> */}
+
+      <div>
+        <img className="rounded-full w-10 lg:w-14" src={profilepic.src} alt="profile pic"/>
+      </div>
 
       <h1 className="absolute left-1/2 -translate-x-1/2 lg:text-lg">
         <a href="/personal-website">Jason Matthews</a>
