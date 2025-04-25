@@ -1,0 +1,21 @@
+---
+const {title, image, desc, link} = Astro.props
+import "../styles/global.css";
+---
+
+<div class="py-4 ease-in-out duration-150 flex flex-col hover:bg-white hover:border-t-gray-500/50 rounded-md hover:!opacity-100 group-hover:opacity-50 pointer-events-auto">
+	<div class="flex flex-col text-nowrap px-2 text-gray-600 font-serif text-sm">
+		<img class="pt-2 xl:max-w-[242px]" src = {image.src} />
+	</div>
+	<div class="px-2">
+		<a href={link} target=”_blank” class="py-4 text-lg font-bold hover:text-cyan-600">
+			{title}
+		</a>
+		<div class="pt-4 space-y-5">
+			{desc}
+		</div>
+		<div class="flex flex-wrap">
+			<slot />
+		</div>
+	</div>
+</div>

@@ -1,8 +1,15 @@
 ---
 import Sidebar from "../components/Sidebar.tsx";
 import Layout from "../layouts/Layout.astro";
-import NavBar from "../components/NavBar"
-import NavBar2 from "../components/NavBar2"
+import NavBar from "../components/NavBar";
+import NavBar2 from "../components/NavBar2";
+import ExperienceBlock from "../components/ExperienceBlock.astro";
+import ProjectBlock from "../components/ProjectBlock.astro";
+import SkillTag from "../components/SkillTag.astro";
+import seamCarving from "../images/seamCarvingScreenDali.png"
+import sudokuCSP from "../images/SudokuCSPSolver-Solved.png"
+import PinnDE from "../images/PinnDE.png"
+import BarretTechWAM from "../images/barretTechWAM.png"
 import "../styles/global.css";
 ---
 
@@ -50,54 +57,120 @@ import "../styles/global.css";
 			<div class="pt-12 flex justify-center text-3xl font-bold">
 				Experience
 			</div>
-			<div class="lg:pt-12 pt-8 lg:mx-40 justify-center space-y-5">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<div class="lg:pt-12 pt-8 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
+				<div class="xl:flex xl:flex-1">
+					<ExperienceBlock
+						role="Research Assistant"
+						company="Memorial University" link="https://www.mun.ca/math/"
+						duration="May 2024 -- PRESENT"
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+					<SkillTag skill="test"/>
+					</ExperienceBlock>
+				</div>
+				<div class="xl:flex xl:flex-1">
+					<ExperienceBlock
+						role="Software Team Member"
+						company="Paradigm Engineering"
+						link="https://munparadigm.com/"
+						duration="Sep 2024 -- PRESENT"
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+						<SkillTag skill="JavaScript"/>
+						<SkillTag skill="ReactJS"/>
+						<SkillTag skill="AstroJS"/>
+						<SkillTag skill="TailwindCSS"/>
+						<SkillTag skill="C"/>
+					</ExperienceBlock>
+				</div>
+			</div>
+
+			<div class="lg:pt-12 pt-8 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
+				<div class="xl:flex xl:flex-1">
+					<ExperienceBlock
+						role="Seasonal Associate"
+						company="Kent Building Supplies" link="https://www.aboutamazon.com/about-us"
+						duration="May--Sep, 2020--2023"
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+					<SkillTag skill="test"/>
+					</ExperienceBlock>
+				</div>
+				<div class="xl:flex xl:flex-1">
+					<!-- <ExperienceBlock
+						role="Software Team Member (MCS)"
+						company="MUNStar-1"
+						link="https://munstar-1.com/"
+						duration="Aug 2023 -- PRESENT"
+						desc="I am developing a FreeRTOS-based operating system for the team’s satellite, managing its subsystems effectively. I am also architecting CI/CD pipelines to ensure efficient testing and deployment of the satellite's software."
+					>
+						<SkillTag skill="JavaScript"/>
+						<SkillTag skill="ReactJS"/>
+						<SkillTag skill="AstroJS"/>
+						<SkillTag skill="TailwindCSS"/>
+						<SkillTag skill="C"/>
+						<SkillTag skill="Linux"/>
+						<SkillTag skill="FreeRTOS"/>
+					</ExperienceBlock> -->
+				</div>
 			</div>
 		</div>
 
-		<div id="projects" class="px-12">
+		<div id="projects", class="px-12">
 			<div class="pt-12 flex justify-center text-3xl font-bold">
 				Projects
 			</div>
-			<div class="lg:pt-12 pt-8 lg:mx-40 justify-center space-y-5">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+			<div class="pt-12 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
+				<div class="xl:flex xl:flex-1">
+					<ProjectBlock
+						title="PinnDE"
+						image={PinnDE}
+						link="https://github.com/JB55Matthews/PinnDE"
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+						<SkillTag skill="TypeScript"/>
+						<SkillTag skill="ReactJS"/>
+					</ProjectBlock>
+				</div>
+				<div class="xl:flex xl:flex-1">
+					<ProjectBlock
+						title="Seam Carving"
+						link="https://github.com/JB55Matthews/Seam-Carving"
+						image={seamCarving}
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+						<SkillTag skill="TypeScript"/>
+						<SkillTag skill="ReactJS"/>
+					</ProjectBlock>
+				</div>
+			</div>
+			<div class="pt-12 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
+				<div class="xl:flex xl:flex-1">
+					<ProjectBlock
+						title="Sudoku CSP Solver"
+						image={sudokuCSP}
+						link="https://github.com/JB55Matthews/Sudoku-CSP-Algorithm-Solvers"
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+						<SkillTag skill="TypeScript"/>
+					</ProjectBlock>
+				</div>
+				<div class="xl:flex xl:flex-1">
+					<ProjectBlock
+						title="Retrievium"
+						link="https://github.com/JB55Matthews/Comp3766_FinalProject_Group12"
+						image={BarretTechWAM}
+						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					>
+						<SkillTag skill="TypeScript"/>
+						<SkillTag skill="ReactJS"/>
+						<SkillTag skill="RemixJS"/>
+					</ProjectBlock>
+				</div>
 			</div>
 		</div>
 
-		<div id="publications" class="px-12">
+		<div id="publications", class="px-12">
 			<div class="pt-12 flex justify-center text-3xl font-bold">
 				Publications
 			</div>
@@ -124,7 +197,7 @@ import "../styles/global.css";
 		</div>
 
 
-		<div id="footer" class="lpx-12 py-20 text-center text-gray-600 text-sm">
+		<div id="footer" class="px-12 py-20 text-center text-gray-600 text-sm">
 			Created with <a class="text-black hover:text-cyan-600" href="https://astro.build">Astro</a>, 
 			<a class="text-black hover:text-cyan-600" href="https://tailwindcss.com">Tailwind CSS</a>, and 
 			<a class="text-black hover:text-cyan-600" href="https://react.dev/">React</a> Thanks for reading!
