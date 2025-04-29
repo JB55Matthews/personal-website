@@ -1,8 +1,5 @@
 ---
-import Sidebar from "../components/Sidebar.tsx";
-import Layout from "../layouts/Layout.astro";
-import NavBar from "../components/NavBar";
-import NavBar2 from "../components/NavBar2";
+import NavBar2 from "../components/NavBar";
 import ExperienceBlock from "../components/ExperienceBlock.astro";
 import ProjectBlock from "../components/ProjectBlock.astro";
 import SkillTag from "../components/SkillTag.astro";
@@ -10,6 +7,7 @@ import seamCarving from "../images/seamCarvingScreenDali.png"
 import sudokuCSP from "../images/SudokuCSPSolver-Solved.png"
 import PinnDE from "../images/PinnDE.png"
 import BarretTechWAM from "../images/barretTechWAM.png"
+import website from "../images/website.png"
 import { Github, Linkedin, MoveUpRight } from "lucide-react";
 import "../styles/global.css";
 ---
@@ -40,15 +38,15 @@ import "../styles/global.css";
 					methods. 
 				</p>
 				<p>
-					I developed an interest in mathematics at a young age, winning a certifiate of distinction in the 
+					I developed an interest in mathematics at a young age, winning a certificate of distinction in the 
 					<a class="text-black hover:text-cyan-600" href="https://cemc.uwaterloo.ca/contests/pcf" target=”_blank”>Cayley Math Contest</a>, 
 					a Canada wide math contest held by Waterloo. Programming became an outlet to turn this passion in mathematics
-					into a pratical application. In high school I started to develop simple calculators in 
+					into a practical application. In high school I started to develop simple calculators in 
 					FreeBASIC and building simple web apps with HTML, CSS, and JavaScript.
 				</p>
 				<p>
-					Graduating high school I recived the <a class="text-black hover:text-cyan-600" href="https://schulichleaders.com/" target=”_blank”>Schulich Leader Scholarship</a> 
-					to attend <a class="text-black hover:text-cyan-600" href="https://mun.ca/" target=”_blank”>Memorial Univeristy of Newfoundland</a>, 
+					Graduating high school I received the <a class="text-black hover:text-cyan-600" href="https://schulichleaders.com/" target=”_blank”>Schulich Leader Scholarship</a> 
+					to attend <a class="text-black hover:text-cyan-600" href="https://mun.ca/" target=”_blank”>Memorial University of Newfoundland</a>, 
 					the most prestigious STEM scholarship in Canada. Here I am pursuing a joint honours in Computer Science and Pure Mathematics 
 					to combine my two passions into a single high-intensity program. I have spent the last year working as a research
 					assistant in the department of mathematics and statistics, where I have developed a user friendly library implementing physics-informed neural networks
@@ -87,7 +85,13 @@ import "../styles/global.css";
 						role="Research Assistant"
 						company="Memorial University" link="https://www.mun.ca/math/"
 						duration="May 2024 -- PRESENT"
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"I have developed a user-friendly library implementing simple to use ODE and PDE solvers with physics-informed \
+								neural networks and deep operator networks, PinnDE. The core library has been built in published with Python, with \
+								testing new methods being done in C++. The library uses both TensorFlow and JAX as backends. I have also developed \
+								a full documentation website hosted on ReadTheDocs which provides tutorials and documentation of the whole API. \
+								Along with my supervisor, we have also written a preprint which has gotten a significant number of journal-submitted citations. \
+								My current research focuses increasing the user experience with PinnDE, as well as improving and developing cutting-edge \
+								meta-learned optimization methods for physics-informed neural networks."}
 					>
 					<SkillTag skill="Python"/>
 					<SkillTag skill="C++"/>
@@ -104,14 +108,19 @@ import "../styles/global.css";
 						company="Paradigm Engineering"
 						link="https://munparadigm.com/"
 						duration="Sep 2024 -- PRESENT"
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"As a member of Paradigm Engineering, we have been developing an autonomous go-kart to take to the autonomous karting \
+							series held at Purdue University in June 2025. My main role has been developing the core drive algorithm in which the kart will\
+							use to drive autonomously. Using a PX-4, I have used C++ with ROS2 to implement an GPS waypoint following algorithm. I have also \
+							developed a GUI in C++ which we can use to observe important ROS2 topics as the kart is driving.  I have also been working on the code \
+							along with an ESP32 to take input from our PX-4 to the steering motor, developing a strong skill in microcontrollers. \
+							While Paradigm Engineering has over forty members, I am one of ten chosen to be taken to competition."}
 					>
 						<SkillTag skill="C++"/>
 						<SkillTag skill="Python"/>
 						<SkillTag skill="ROS2"/>
 						<SkillTag skill="ESP32"/>
 						<SkillTag skill="Arduino"/>
-						<SkillTag skill="Gazeebo"/>
+						<SkillTag skill="Gazebo"/>
 						<SkillTag skill="Pixhawk PX-4"/>
 						<SkillTag skill="Qt5"/>
 					</ExperienceBlock>
@@ -124,7 +133,10 @@ import "../styles/global.css";
 						role="Seasonal Associate"
 						company="Kent Building Supplies" link="https://kent.ca/en/about"
 						duration="May--Sep, 2020--2023"
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"During all of high school and my first year of university, I worked at Kent Building Supplies in the Seasonal Department. I started in grade ten, \
+							and was then rehired every year until I started working at Memorial University of Newfoundland. Over this time, I became an asset of the store who \
+							knew every department intimately and was relied upon to cover any area which needed the help. I worked diligently to become the most overall useful \
+							employee who could be tasked with any task in the store and have it known it would get done efficiently."}
 					>
 					</ExperienceBlock>
 				</div>
@@ -143,7 +155,11 @@ import "../styles/global.css";
 						title="PinnDE"
 						image={PinnDE}
 						link="https://github.com/JB55Matthews/PinnDE"
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"PinnDE is a Python library giving users the ability to solve both ODEs and PDEs with physics-informed neural networks and \
+							deep operator networks. We currently give access to solving 1+1 spatial-temporal and 2 spatial dimensional PDEs, with Periodic, Dirichlet, \
+							and Neumann boundary conditions. We have soft and hard constraining on most of these networks. This library has a large focus on \
+							user-friendliness, giving the user the ability to provide minimal information needed, helping researchers not directly in the field \
+							to take advantage of these networks without having the high demand of knowledge many other packages require."}
 					>
 					<SkillTag skill="Python"/>
 					<SkillTag skill="C++"/>
@@ -159,7 +175,10 @@ import "../styles/global.css";
 						title="Seam Carving"
 						link="https://github.com/JB55Matthews/Seam-Carving"
 						image={seamCarving}
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"I developed a Java application which allows users to upload and dynamically resize images using a technique known as seam carving. \
+							This technique uses edge detection using the Sobel operator and then a dynamic computation to find \"seams\" of pixels in the image which have the minimal amount\
+							of information. These seams are then removed, in order to take unimportant sections of the image out while keeping important objects \
+							at the same size. The mathematics involved in these computations is discussed in a high level in GitHub repo for this project."}
 					>
 						<SkillTag skill="Java"/>
 						<SkillTag skill="Swing"/>
@@ -171,11 +190,12 @@ import "../styles/global.css";
 				<div class="xl:flex xl:flex-1">
 					<ProjectBlock
 						title="Personal Website"
-						image={sudokuCSP}
+						image={website}
 						link="https://github.com/JB55Matthews/personal-website"
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"This website was built using AstroJS, with TypeScript, React, and TailwindCSS as well. React has been used in the animations \
+							of the navigation bar on large screens, and on smaller screens, the animations of the toggled menu."}
 					>
-						<SkillTag skill="JavaScipt"/>
+						<SkillTag skill="JavaScript"/>
 						<SkillTag skill="TypeScript"/>
 						<SkillTag skill="AstroJS"/>
 						<SkillTag skill="ReactJS"/>
@@ -187,7 +207,11 @@ import "../styles/global.css";
 						title="Barrett Technology 7R WAM"
 						link="https://github.com/JB55Matthews/Comp3766_FinalProject_Group12"
 						image={BarretTechWAM}
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"This is the final project for COMP 3766, Introduction to Robotic Manipulation. I implemented the Barrett Technology 7 revolute joint WAM\
+							robotic arm, a highly used arm in the medical field. I developed the URDF modelling of the arm, which is modeled inside of RViz with ROS. \
+							The forward kinematics for this arm was calculated and implemented along with a GUI to publish joint positions. A numerical inverse kinematics \
+							algorithm is also provided which given and end-effector position can calculate the joint positions for the arm and publish them to the joints. Both \
+							Python and C++ were used in the developing of these scripts in ROS."}
 					>
 						<SkillTag skill="C++"/>
 						<SkillTag skill="Python"/>
@@ -203,7 +227,11 @@ import "../styles/global.css";
 						title="Sudoku CSP Solver"
 						image={sudokuCSP}
 						link="https://github.com/JB55Matthews/Sudoku-CSP-Algorithm-Solvers"
-						desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						desc={"This is a Java application which has been developed with inspiration from MUN's COMP 3200, Algorithm Techniques for AI. This is a Sudoku solver, \
+						which implements multiple constraint satisfaction problem solving techniques to solve sudoku puzzles. A user can put in any puzzle they wish, \
+						and choose what combination of algorithmic techniques will be used to solve the puzzle. This is then timed to be compared with other combinations \
+						of algorithms. These algorithms are the main ones introduced in \"Artificial Intelligence: A Modern Approach\", by Russell and Norvig. AC-3 \
+						inferencing specifically is an arc consistency check described in this book which takes any blank grid to an almost instant solve."}
 					>
 						<SkillTag skill="Java"/>
 						<SkillTag skill="Swing"/>
