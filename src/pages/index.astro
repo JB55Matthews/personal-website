@@ -7,6 +7,7 @@ import seamCarving from "../images/seamCarvingScreenDali.png"
 import sudokuCSP from "../images/SudokuCSPSolver-Solved.png"
 import PinnDE from "../images/PinnDE.png"
 import BarretTechWAM from "../images/barretTechWAM.png"
+import classroomStopwatch from "../images/classroomStopwatch.png"
 import website from "../images/website.png"
 import { Github, Linkedin, MoveUpRight } from "lucide-react";
 import "../styles/global.css";
@@ -156,8 +157,8 @@ import "../styles/global.css";
 						image={PinnDE}
 						link="https://github.com/JB55Matthews/PinnDE"
 						desc={"PinnDE is a Python library giving users the ability to solve both ODEs and PDEs with physics-informed neural networks and \
-							deep operator networks. We currently give access to solving 1+1 spatial-temporal and 2 spatial dimensional PDEs, with Periodic, Dirichlet, \
-							and Neumann boundary conditions. We have soft and hard constraining on most of these networks. This library has a large focus on \
+							deep operator networks. We currently give access to solving 1+n spatial-temporal and n spatial dimensional PDEs, with Periodic, Dirichlet, \
+							and Neumann boundary conditions. This library has a large focus on \
 							user-friendliness, giving the user the ability to provide minimal information needed, helping researchers not directly in the field \
 							to take advantage of these networks without having the high demand of knowledge many other packages require."}
 					>
@@ -170,6 +171,23 @@ import "../styles/global.css";
 					<SkillTag skill="ArXiv"/>
 					</ProjectBlock>
 				</div>
+				<div class="xl:flex xl:flex-1">
+					<ProjectBlock
+						title="Stopwatch and Timer"
+						link="https://github.com/JB55Matthews/classroom-stopwatch"
+						image={classroomStopwatch}
+						desc={"This is a webpage I built as a custom stopwatch and timer for my mother. She is a teacher who is constantly using timers and \
+						stopwatches on her board, and has only ever used the google timer/stopwatch. So, I built her this app which is styled as everything in \
+						her life is; purple and butterflies. This was built with TypeScript with React components, and CSS."}
+					>
+						<SkillTag skill="TypeScript"/>
+						<SkillTag skill="CSS"/>
+						<SkillTag skill="ReactJS"/>
+						<SkillTag skill="HTML"/>
+					</ProjectBlock>
+				</div>
+			</div>
+			<div class="pt-12 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
 				<div class="xl:flex xl:flex-1">
 					<ProjectBlock
 						title="Seam Carving"
@@ -185,8 +203,6 @@ import "../styles/global.css";
 						<SkillTag skill="Image Processing"/>
 					</ProjectBlock>
 				</div>
-			</div>
-			<div class="pt-12 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
 				<div class="xl:flex xl:flex-1">
 					<ProjectBlock
 						title="Personal Website"
@@ -200,8 +216,11 @@ import "../styles/global.css";
 						<SkillTag skill="AstroJS"/>
 						<SkillTag skill="ReactJS"/>
 						<SkillTag skill="TailwindCSS"/>
+						<SkillTag skill="HTML"/>
 					</ProjectBlock>
 				</div>
+			</div>
+			<div class="pt-12 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
 				<div class="xl:flex xl:flex-1">
 					<ProjectBlock
 						title="Barrett Technology 7R WAM"
@@ -220,8 +239,6 @@ import "../styles/global.css";
 						<SkillTag skill="Docker"/>
 					</ProjectBlock>
 				</div>
-			</div>
-			<div class="pt-12 lg:mx-40 xl:flex xl:w-{1/2} space-y-5">
 				<div class="xl:flex xl:flex-1">
 					<ProjectBlock
 						title="Sudoku CSP Solver"
@@ -237,7 +254,6 @@ import "../styles/global.css";
 						<SkillTag skill="Swing"/>
 					</ProjectBlock>
 				</div>
-				<div class="xl:flex xl:flex-1">
 				</div>
 		</div>
 
