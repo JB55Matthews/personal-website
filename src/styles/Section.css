@@ -1,0 +1,43 @@
+.section-wrapper {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.section {
+  padding: 2rem;
+  margin: 0 auto;
+  border: 2px solid rgb(50, 180, 50);
+  background: #050505;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: rgb(50, 180, 50);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 95%;
+    padding: 1rem;
+    border: None;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
