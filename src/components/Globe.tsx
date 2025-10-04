@@ -1,5 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import * as THREE from "three";
+import {
+  Scene,
+  PerspectiveCamera,
+  WebGLRenderer,
+  SphereGeometry,
+  MeshBasicMaterial,
+  Mesh,
+} from "three";
 import "../styles/Globe.css";
 
 const Globe: React.FC = () => {
@@ -8,39 +15,38 @@ const Globe: React.FC = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
-    // Clear previous globe if React re-renders
     mountRef.current.innerHTML = "";
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
+    const scene = new Scene();
+    const camera = new PerspectiveCamera(
       45,
       mountRef.current.clientWidth / mountRef.current.clientHeight,
       0.1,
       1000
     );
-    camera.position.z = 3; // keep camera fixed
+    camera.position.z = 3; 
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new WebGLRenderer({ alpha: true });
     renderer.setSize(
       mountRef.current.clientWidth,
       mountRef.current.clientHeight
     );
     mountRef.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(1, 32, 32);
-    const material = new THREE.MeshBasicMaterial({
+    const geometry = new SphereGeometry(1, 32, 32);
+    const material = new MeshBasicMaterial({
       color: 0x00ff00,
       wireframe: true,
     });
-    const globe = new THREE.Mesh(geometry, material);
+    const globe = new Mesh(geometry, material);
     scene.add(globe);
 
     // Create ships
-    const ships: THREE.Mesh[] = [];
+    const ships: Mesh[] = [];
     for (let i = 0; i < 5; i++) {
-      const shipGeom = new THREE.SphereGeometry(0.05, 8, 8);
-      const shipMat = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-      const ship = new THREE.Mesh(shipGeom, shipMat);
+      const shipGeom = new SphereGeometry(0.05, 8, 8);
+      const shipMat = new MeshBasicMaterial({ color: 0x00ff00 });
+      const ship = new Mesh(shipGeom, shipMat);
       ships.push(ship);
       scene.add(ship);
     }
@@ -54,10 +60,9 @@ const Globe: React.FC = () => {
       ships.forEach((ship, i) => {
         const baseAngle = frame * 0.01 + i * (Math.PI * 2 / ships.length);
 
-        // Shrink orbits slightly on small screens
         const radiusMultiplier =
-          mountRef.current!.clientWidth < 400 ? 1.0 : 1.0; // keep safe
-        const verticalOffset = 0.5; // fixed so ships don’t leave view
+          mountRef.current!.clientWidth < 400 ? 1.0 : 1.0;
+        const verticalOffset = 0.5; 
 
         switch (i % 3) {
           case 0:
