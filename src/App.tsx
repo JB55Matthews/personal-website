@@ -111,7 +111,7 @@ const App: React.FC = () => {
             name: "PinnDE: Physics-Informed Neural Networks for Solving Differential Equations",
             description: (
               <p>
-                placeholder
+                placeholder for now
               </p>
             ),
           },
