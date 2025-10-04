@@ -39,7 +39,7 @@
 
 @media (max-width: 768px) {
   .modal {
-    margin: 0 1rem; /* add horizontal margin */
-    padding: 0.5rem; /* slightly smaller padding for small screens */
+    margin: 0 1rem;
+    padding: 0.5rem; 
   }
 }
