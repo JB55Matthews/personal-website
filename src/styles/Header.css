@@ -1,0 +1,17 @@
+.header {
+  padding: 2rem;
+  text-align: center;
+}
+
+.header-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color: rgb(50, 180, 50);;
+}
+
+.header-text {
+  font-size: clamp(1rem, 1vw, 1rem);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5;
+}

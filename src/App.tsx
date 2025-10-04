@@ -1,35 +1,125 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Header from "./components/Header";
+import Globe from "./components/Globe";
+import Section from "./components/Section";
+import "./styles/App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      <Header />
+      <Globe />
 
-export default App
+      <Section
+        title="Experiences"
+        items={[
+          {
+            id: 1,
+            name: "Software Developer (co-op) - CoLab Software",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 2, 
+            name: "Research Assistant - Memorial University",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 3, 
+            name: "Algorithms Team Lead - Paradigm Engineering",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+        ]}
+      />
+
+      <Section
+        title="Projects"
+        items={[
+          {
+            id: 1,
+            name: "PinnDE",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 2,
+            name: "React Playground",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 3,
+            name: "Seam Carving",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 4,
+            name: "GoCPU",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 5,
+            name: "Barret Tech 7R WAM",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+          {
+            id: 6,
+            name: "Sudoku CSP Solver",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+        ]}
+      />
+
+      <Section
+        title="Publications"
+        items={[
+          {
+            id: 1,
+            name: "PinnDE: Physics-Informed Neural Networks for Solving Differential Equations",
+            description: (
+              <p>
+                placeholder
+              </p>
+            ),
+          },
+        ]}
+      />
+    </div>
+  );
+};
+
+export default App;
+
